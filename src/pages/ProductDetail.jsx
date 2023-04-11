@@ -17,7 +17,7 @@ const ProductDetail = () => {
     return (
         <div>
         
-        <Carousel key={detail.id} className="carousel">
+        <Carousel key={detail.id}>
         
         {
             
@@ -30,10 +30,7 @@ const ProductDetail = () => {
                             alt="First slide"
                             />
 
-                        <Carousel.Caption>
-                            <h3>{detail.title}</h3>
-                            <p>{detail.description}.</p>
-                        </Carousel.Caption>
+                        
             
                         </Carousel.Item>
     
@@ -41,6 +38,11 @@ const ProductDetail = () => {
                
             ))
         }
+
+        <Carousel.Caption>
+            <h3>{detail.title}</h3>
+            <p>{detail.description}.</p>
+        </Carousel.Caption>
 
         </Carousel>
 

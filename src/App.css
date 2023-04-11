@@ -59,7 +59,34 @@
   z-index: 100;
 }
 
-.carousel h3{
-  color: white;
+.active.carousel-item{
+  width: 1rem;
 }
+
+.carousel-inner h3{
+  height: 3rem;
+  width: 32rem;
+  position: relative;
+  left: 28rem;
+  bottom: 14rem;
+
+}
+
+.carousel-inner p{
+  height: 3rem;
+  width: 38rem;
+  position: relative;
+  left: 25rem;
+  bottom: 11rem;
+
+}
+
+
+
+.d-block{
+  height: 28rem;
+  width: 30rem;
+}
+
+
 
