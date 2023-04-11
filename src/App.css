@@ -9,6 +9,20 @@
   background-color: black;
 }
 
+.card-img-top{
+  height: 18rem;
+}
+
+div .mb-3.col{
+
+}
+
+.card-body{
+  height: 30rem;
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
 .lds-facebook {
   display: inline-block;
   position: relative;
