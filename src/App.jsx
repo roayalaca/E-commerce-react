@@ -4,7 +4,7 @@ import {
   Routes,
   Route
 } from 'react-router-dom'
-import NavBar from './components/NavBar'
+import Bar from './components/Bar';
 import Home from './pages/Home';
 import ProductDetail from './pages/ProductDetail';
 import Login from './pages/Login';
@@ -23,7 +23,7 @@ function App() {
       {
           isLoading && <Loader/> 
       }  
-        <NavBar/>
+        <Bar/>
         <Routes>
           <Route
           path='/'
