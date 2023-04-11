@@ -14,7 +14,6 @@
   position: relative;
   width: 80px;
   height: 80px;
-  background-color: yellow;
 }
 .lds-facebook div {
   display: inline-block;
@@ -58,5 +57,9 @@
   justify-content: center;
   align-items: center;
   z-index: 100;
+}
+
+.carousel h3{
+  color: white;
 }
 

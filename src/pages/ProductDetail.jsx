@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Carousel from 'react-bootstrap/Carousel';
 
 const ProductDetail = () => {
     const { id } = useParams()
@@ -15,7 +16,35 @@ const ProductDetail = () => {
 
     return (
         <div>
-            <h1>{detail.title}</h1>  
+        
+        <Carousel key={detail.id} className="carousel">
+        
+        {
+            
+               
+                        detail.images?.map (detail => (
+                        <Carousel.Item>
+                            <img
+                            className="d-block w-10"
+                            src={detail.url}
+                            alt="First slide"
+                            />
+
+                        <Carousel.Caption>
+                            <h3>{detail.title}</h3>
+                            <p>{detail.description}.</p>
+                        </Carousel.Caption>
+            
+                        </Carousel.Item>
+    
+         
+               
+            ))
+        }
+
+        </Carousel>
+
+       
 
         </div>
     );
