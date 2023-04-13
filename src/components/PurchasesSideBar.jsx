@@ -32,7 +32,7 @@ const PurchasesSideBar = ({show, handleClose}) => {
     const less = item => { 
            
         const data = {
-            quantity: item.quantity - 1
+            quantity: item.quantity > 1 ? item.quantity - 1 : item.quantity
         }
 
         dispatch( updateCartThunk(data, item) )
