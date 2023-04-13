@@ -63,12 +63,13 @@ const ProductDetail = () => {
         <Carousel.Caption>
             <h3>{detail.title}</h3>
             <p>{detail.description}.</p>
+            <p>{"$" + detail.price}.</p>
 
             <Button onClick={ less }>-</Button>
                 { counter }
             <Button onClick={ () => setCounter( counter + 1 )}>+</Button>
             <Button onClick={ addProduct }>
-                 Add to cart
+                 Add to cart <i class="bi bi-cart3"></i>
             </Button>
         </Carousel.Caption>
 

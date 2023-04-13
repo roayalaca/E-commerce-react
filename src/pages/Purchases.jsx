@@ -16,6 +16,14 @@ const Purchases = () => {
         
     }, [])
 
+    let suma = 0
+
+   
+    for (let i = 0; i < purchases.length; i++) {
+        suma = suma + (purchases[i].quantity * purchases[i].product.price)
+    }
+
+
     return (
         <div>
             <h1>Purchases</h1>
@@ -37,7 +45,7 @@ const Purchases = () => {
                 ))
             }
 
-            <h2>Total</h2>
+            <h2>Total: ${suma}</h2>
         </div>
     );
 };
