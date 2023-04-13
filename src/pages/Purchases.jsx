@@ -26,7 +26,10 @@ const Purchases = () => {
                     <Card.Body className="d-inline">
                         <Card.Title>{item.product.title}</Card.Title>
                         <Card.Text>
-                        {item.product.description}
+                        {item.quantity}
+                        </Card.Text>
+                        <Card.Text>
+                        {"$"+item.product.price*item.quantity}
                         </Card.Text>
                     </Card.Body>
                     </Card>
