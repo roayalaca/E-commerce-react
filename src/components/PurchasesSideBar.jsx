@@ -65,7 +65,7 @@ const PurchasesSideBar = ({show, handleClose}) => {
 
                                     <Button onClick={ () => remove(item.id) }>Delete</Button>
 
-                                    <Button onClick={ () => less(item.id) }>-</Button>{counter}<Button onClick={() => addition(item.id)}>+</Button>
+                                    <Button onClick={ () => less(item.id) }>-</Button>{item.quantity}<Button onClick={() => addition(item.id)}>+</Button>
 
                                     <h2>{item.quantity* item.product.price}</h2>
                                 
