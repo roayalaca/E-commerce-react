@@ -29,24 +29,22 @@ const PurchasesSideBar = ({show, handleClose}) => {
         dispatch(removeCartThunk(id))
     }
 
-    const less = id => { 
-        setCounter(counter - 1)
+    const less = item => { 
            
         const data = {
-            quantity: counter - 1
+            quantity: item.quantity - 1
         }
 
-        dispatch( updateCartThunk(data, id) )
+        dispatch( updateCartThunk(data, item) )
     }
 
-    const addition = id => {
-        setCounter(counter + 1)
+    const addition = item => {
 
         const data = {
-            quantity: counter + 1
+            quantity: item.quantity + 1
         }
 
-        dispatch( updateCartThunk(data, id) )
+        dispatch( updateCartThunk(data, item) )
     }
 
     return (
@@ -65,7 +63,7 @@ const PurchasesSideBar = ({show, handleClose}) => {
 
                                     <Button onClick={ () => remove(item.id) }>Delete</Button>
 
-                                    <Button onClick={ () => less(item.id) }>-</Button>{item.quantity}<Button onClick={() => addition(item.id)}>+</Button>
+                                    <Button onClick={ () => less(item) }>-</Button>{item.quantity}<Button onClick={() => addition(item)}>+</Button>
 
                                     <h2>{item.quantity* item.product.price}</h2>
                                 

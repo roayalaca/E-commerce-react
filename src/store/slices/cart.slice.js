@@ -38,10 +38,10 @@ export const removeCartThunk = id => dispatch => {
      .catch( error => console.error(error) )
 }
 
-export const updateCartThunk = (data, id) => dispatch => {
+export const updateCartThunk = (data, item) => dispatch => {
     
     axios
-     .put(`https://e-commerce-api-v2.academlo.tech/api/v1/cart/${id}`, data, getConfig())
+     .put(`https://e-commerce-api-v2.academlo.tech/api/v1/cart/${item.id}`, data, getConfig())
      .then( () => dispatch( getCartThunk() ) )
      .catch( error => console.error(error) )
 }
