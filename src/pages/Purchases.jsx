@@ -30,11 +30,14 @@ const Purchases = () => {
                         </Card.Text>
                         <Card.Text>
                         {"$"+item.product.price*item.quantity}
+                        
                         </Card.Text>
                     </Card.Body>
                     </Card>
                 ))
             }
+
+            <h2>Total</h2>
         </div>
     );
 };

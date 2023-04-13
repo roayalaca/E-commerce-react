@@ -47,6 +47,15 @@ const PurchasesSideBar = ({show, handleClose}) => {
         dispatch( updateCartThunk(data, item) )
     }
 
+    let suma = 0
+
+   
+        for (let i = 0; i < cart.length; i++) {
+            suma = suma + (cart[i].quantity * cart[i].product.price)
+        }
+
+       
+
     return (
         <Offcanvas show={show} onHide={handleClose} placement={'end'} >
             <Offcanvas.Header closeButton>
@@ -66,14 +75,17 @@ const PurchasesSideBar = ({show, handleClose}) => {
                                     <Button onClick={ () => less(item) }>-</Button>{item.quantity}<Button onClick={() => addition(item)}>+</Button>
 
                                     <h2>{item.quantity* item.product.price}</h2>
+                                    
                                 
                             </li>
+                            
 
                             
                         ))
                 
                     }
                     </ul>
+                    <h2>Subtotal: {suma}</h2> 
 
                     <Button onClick={ () => dispatch(cartCheckoutThunk()) }> Checkout </Button>
                    
