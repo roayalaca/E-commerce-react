@@ -11,6 +11,7 @@ import Login from './pages/Login';
 import Purchases from './pages/Purchases';
 import Loader from './components/Loader';
 import { useSelector } from 'react-redux';
+import ProtectedRoutes from './components/ProtectedRoute';
 
 
 function App() {
@@ -37,10 +38,13 @@ function App() {
           path='/login'
           element={ <Login/> }
           />
-          <Route
-          path='/purchases'
-          element={ <Purchases/> }
-          />
+          <Route element={ <ProtectedRoutes/> }>
+            <Route
+            path='/purchases'
+            element={ <Purchases/> }
+            />
+          </Route>
+         
         </Routes>
       </div>
     </HashRouter>
