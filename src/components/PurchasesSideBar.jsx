@@ -70,11 +70,11 @@ const PurchasesSideBar = ({show, handleClose}) => {
                                     <h5>{item.product?.title}</h5>
                                     <img style={{ width: 80, objectFit: "contain"}} src={item.product?.images[0].url} alt="" />
 
-                                    <Button onClick={ () => remove(item.id) }>Delete</Button>
+                                    <Button onClick={ () => remove(item.id) }><i class="bi bi-trash3"></i></Button>
 
                                     <Button onClick={ () => less(item) }>-</Button>{item.quantity}<Button onClick={() => addition(item)}>+</Button>
 
-                                    <h2>{item.quantity* item.product.price}</h2>
+                                    <h2>{"Subtotal" + " " + "$" + item.quantity* item.product.price}</h2>
                                     
                                 
                             </li>
@@ -85,7 +85,7 @@ const PurchasesSideBar = ({show, handleClose}) => {
                 
                     }
                     </ul>
-                    <h2>Subtotal: {suma}</h2> 
+                    <h2>Total: ${suma}</h2> 
 
                     <Button onClick={ () => dispatch(cartCheckoutThunk()) }> Checkout </Button>
                    

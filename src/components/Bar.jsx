@@ -30,12 +30,12 @@ const Bar = () => {
         <>
         <Navbar bg="dark" variant="dark">
                 <Container>
-                <Navbar.Brand as={ Link } to="/" style={{ fontSize:"35px", borderRight:"solid white 5px", paddingRight:"11rem", paddingLeft:"11rem"}}>
+                <Navbar.Brand as={ Link } to="/" >
                     E-commerce</Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link as={ Link } to="/login" style={{  height:"3rem",borderRight:"solid white 5px", paddingLeft: "6.4rem", paddingRight: "6.4rem", paddingTop: "1rem"}}><i class="bi bi-person"></i></Nav.Link>
-                    <Nav.Link as={ Link } to="/purchases" style={{  height:"3rem",borderRight:"solid white 5px", paddingLeft: "6.4rem", paddingRight: "6.4rem", paddingTop: "1rem"}} ><i class="bi bi-archive"></i></Nav.Link>
-                    <Nav.Link style={{  height:"3rem", paddingLeft: "6rem", paddingRight: "6.4rem", paddingTop: "1rem"}}
+                    <Nav.Link as={ Link } to="/login" ><i class="bi bi-person"></i></Nav.Link>
+                    <Nav.Link as={ Link } to="/purchases"  ><i class="bi bi-archive"></i></Nav.Link>
+                    <Nav.Link 
                     onClick={ () => sideBarAction() }
                     ><i class="bi bi-cart3"></i></Nav.Link>
                 </Nav>

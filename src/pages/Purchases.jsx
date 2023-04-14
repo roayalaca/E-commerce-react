@@ -26,18 +26,18 @@ const Purchases = () => {
 
     return (
         <div>
-            <h1>Purchases</h1>
+            <h1>Your purchases</h1>
             {
                 purchases.map ( item => (
-                    <Card style={{ width: '100%', display: "flex", flexDirection: "row" }} key={item.id}>
-                    <Card.Img variant="left" src={item.product.images[1].url} style={{ width: 150, height: 150 }} />
-                    <Card.Body className="d-inline">
-                        <Card.Title>{item.product.title}</Card.Title>
+                    <Card style={{ width: '100', height:"35rem" , border: "5px solid black", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "row" }} key={item.id}>
+                    <Card.Img variant="left" src={item.product.images[0].url} style={{ width: "19rem", height: "20rem"}} />
+                    <Card.Body className="d-inline" style={{ marginTop: "15rem" }}>
+                        <Card.Title>{"Product:" + " " + item.product.title}</Card.Title>
                         <Card.Text>
-                        {item.quantity}
+                        {"Quantity:" + " " + item.quantity}
                         </Card.Text>
                         <Card.Text>
-                        {"$"+item.product.price*item.quantity}
+                        {"Subtotal" + " " + "$"+item.product.price*item.quantity}
                         
                         </Card.Text>
                     </Card.Body>
@@ -45,7 +45,7 @@ const Purchases = () => {
                 ))
             }
 
-            <h2>Total: ${suma}</h2>
+            <h2 style={{ color: "white" }}>Total: ${suma}</h2>
         </div>
     );
 };
